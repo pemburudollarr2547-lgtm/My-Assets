@@ -1,0 +1,128 @@
+/* =========================================
+   CSS PENGGANTI HOMENERO V3 (MANDIRI)
+   ========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--f1, #f1f1f1);
+    font-family: 'Lexend Deca', sans-serif;
+    overflow-x: hidden;
+}
+
+.container { padding: 0 15px; }
+hr { border: 0; border-top: 1px solid #ddd; margin: 15px 0; }
+a { text-decoration: none; color: inherit; }
+
+/* HEADER & WAVES */
+.wd-bg-header {
+    background: var(--utama, #005d88);
+    height: 120px;
+    position: relative;
+    width: 100%;
+}
+.waves {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 40px;
+}
+.fix-header {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    z-index: 10;
+}
+.fix-header img { width: 35px; height: 35px; border-radius: 50%; cursor: pointer; }
+.fix-header h5 { margin: 0; font-size: 14px; font-weight: 600; flex-grow: 1; }
+.total-trx button {
+    background: rgba(255,255,255,0.2);
+    border: none; color: white;
+    padding: 5px 10px; border-radius: 10px; font-size: 12px;
+}
+
+/* PANEL SALDO */
+.saldo-panel {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: -30px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    z-index: 5;
+}
+.balance { display: flex; justify-content: space-between; align-items: center; }
+.saldo-balance p, .poin-balance p { margin: 0; font-size: 11px; color: #666; }
+.saldo-balance h5, .poin-balance h5 { margin: 5px 0 0 0; font-size: 16px; font-weight: bold; color: var(--utama); }
+.Qris { background: var(--utama); padding: 8px; border-radius: 10px; display: flex; justify-content: center; align-items: center;}
+
+/* MENU GRID (4 & 5 Kolom) */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+.menu-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+.menu-item { text-align: center; cursor: pointer; }
+.menu-item img { width: 40px; height: 40px; object-fit: contain; margin-bottom: 5px; }
+.menu-name { font-size: 11px; font-weight: 500; color: #333; line-height: 1.2; }
+
+/* HOT PROMO */
+.terlaris { background: white; padding: 15px; border-radius: 15px; margin-top: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.terlaris-header { display: flex; align-items: center; gap: 5px; margin-bottom: 10px; }
+.terlaris-header h5 { margin: 0; font-size: 14px; font-weight: bold; flex-grow: 1; }
+.img-terlaris { display: flex; gap: -10px; }
+.img-terlaris img { width: 20px; height: 20px; border-radius: 50%; border: 2px solid white; margin-left: -8px;}
+
+/* FLASHSALE */
+.flashsale-page { background: white; padding: 15px; border-radius: 15px; }
+#countdown { margin-top: 5px; margin-bottom: 15px; }
+#countdown span { background: red; color: white; padding: 2px 5px; border-radius: 4px; font-size: 12px; font-weight: bold;}
+.scrollmenu2 { overflow-x: auto; white-space: nowrap; padding-bottom: 10px; }
+.product-container { display: inline-flex; gap: 10px; }
+
+/* OFFCANVAS & LITE PANEL (POPUP BAWAH & SAMPING) */
+.overlay, .lite-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 99;
+    display: none; opacity: 0; transition: opacity 0.3s;
+}
+.offcanvas {
+    position: fixed; bottom: -100%; left: 0; width: 100%;
+    background: white; border-radius: 20px 20px 0 0; z-index: 100;
+    transition: bottom 0.3s ease-in-out; padding-bottom: 20px;
+    max-height: 80vh; overflow-y: auto;
+}
+.lite-panel {
+    position: fixed; top: 0; left: -100%; width: 75%; height: 100%;
+    background: white; z-index: 100; transition: left 0.3s ease-in-out;
+    padding: 20px; box-sizing: border-box; overflow-y: auto;
+}
+.overlay.active, .lite-overlay.active { display: block; opacity: 1; }
+.offcanvas.active { bottom: 0; }
+.lite-panel.active { left: 0; }
+.offcanvas-header { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
+.lis { width: 40px; height: 5px; background: #ccc; border-radius: 10px; border: none; }
+.offcanvas-body { padding: 15px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+
+/* MODAL UTAMA */
+.modal {
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: white; margin: 50% auto; padding: 20px;
+    border-radius: 15px; width: 80%; position: relative;
+}
+.close { position: absolute; right: 15px; top: 10px; font-size: 20px; font-weight: bold; cursor: pointer; }
+.d-none { display: none !important; }
